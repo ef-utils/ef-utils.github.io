@@ -54,8 +54,9 @@ body {
     border-bottom: 2px solid var(--accent);
 }
 
-.button:hvoer {
-    filter: brightness(40%);
+.button:hover {
+    transition-duration: 0.3s;
+    filter: brightness(85%);
 }
 
 .content {
@@ -109,8 +110,14 @@ body {
     float: left;
     position: fixed;
     bottom: 0px;
-    background-color: var(--dark);
+    background-color: #232221;
     border-top: 1px solid rgba(12, 12, 12, 0.5);
+    transition: transform 0.3s ease-in;
+}
+
+.mobile-menu.hidden { 
+    transform: translateX(-292px);
+    transition: transform 0.3s ease-out;
 }
 
 .mobile-menu-item .mobile-menu-link {
@@ -140,7 +147,7 @@ body {
     border-bottom: 1px solid rgba(12, 12, 12, 0.5);
 }
 
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 740px) {
     .mobile-menu-button {
         display: initial;
     }
@@ -148,4 +155,38 @@ body {
     .links {
         display: none;
     }
+}
+
+@media only screen and (max-width: 440px) {
+    .pages {
+        display: none;
+    }
+}
+
+.menu-page {
+    float: left;
+    filter: brightness(50%);
+}
+
+.menu-page.active {
+    color: var(--accent);
+    filter: brightness(100%);
+}
+
+.menu-page:hover {
+    transition-duration: 0.3s;
+    filter: brightness(100%)
+}
+
+.content {
+    color: var(--light);
+}
+
+.content a {
+    color: var(--accent)
+}
+
+::selection {
+    background-color: var(--light);
+    color: var(--dark);
 }
