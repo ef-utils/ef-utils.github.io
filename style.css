@@ -4,16 +4,21 @@
     --accent: #B57FEA;
 }
 
+@font-face {
+    font-family: Jost;
+    src: url('/assets/Jost-400-Book.ttf');
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: var(--dark);
-    font-family: Jost;
+    font-family: Jost, sans-serif;
 }
 
 .menu {
     width: calc(100% - 58px);
-    background-color: rgba(12, 12, 12, 0.3);
+    background-color: rgb(35, 34, 33);
     height: 44px;
     position: fixed;
     top: 0px;
@@ -21,7 +26,8 @@ body {
     padding-left: 28px;
     padding-right: 28px;
     font-size: 22px;
-    color: var(--light)
+    color: var(--light);
+    z-index: 5;
 }
 
 .menu a {
@@ -57,10 +63,6 @@ body {
 .button:hover {
     transition-duration: 0.3s;
     filter: brightness(85%);
-}
-
-.content {
-    padding-top: 57px;
 }
 
 .home {
@@ -113,6 +115,7 @@ body {
     background-color: #232221;
     border-top: 1px solid rgba(12, 12, 12, 0.5);
     transition: transform 0.3s ease-in;
+    z-index: 3;
 }
 
 .mobile-menu.hidden { 
@@ -147,6 +150,30 @@ body {
     border-bottom: 1px solid rgba(12, 12, 12, 0.5);
 }
 
+.mobile-menu-links a {
+    text-decoration: none;
+}
+
+.mobile-menu-pages {
+    width: 260px;
+    padding: 16px;
+    display: inline-flex;
+}
+
+.mobile-menu-page {
+    position: relative;
+    font-size: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.mobile-menu-page .active {
+    filter: brightness(100%);
+    color: var(--accent)
+}
+
 @media only screen and (max-width: 740px) {
     .mobile-menu-button {
         display: initial;
@@ -155,9 +182,7 @@ body {
     .links {
         display: none;
     }
-}
 
-@media only screen and (max-width: 440px) {
     .pages {
         display: none;
     }
@@ -178,15 +203,18 @@ body {
     filter: brightness(100%)
 }
 
+::selection {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
 .content {
     color: var(--light);
+    padding-top: 57px;
+    width: 564px;
+    margin: auto;
 }
 
 .content a {
     color: var(--accent)
-}
-
-::selection {
-    background-color: var(--light);
-    color: var(--dark);
 }

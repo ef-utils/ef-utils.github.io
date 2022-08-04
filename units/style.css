@@ -1,0 +1,58 @@
+.units-button {
+    color: var(--dark) !important;
+    text-decoration: none;
+}
+
+.grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(7, 72px);
+    grid-gap: 10px;
+}
+
+.unit {
+    height: 66px;
+    cursor: pointer;
+    position: relative;
+}
+
+.unit[star="1"] {
+    border: 3px gray solid;
+}
+.unit[star="2"] {
+    border: 3px green solid;
+}
+.unit[star="3"] {
+    border: 3px rgb(58, 58, 216) solid;
+}
+.unit[star="4"] {
+    border: 3px rgb(137, 75, 199) solid;
+}
+.unit[star="5"] {
+    border: 3px red solid;
+}
+.unit[star="6"] {
+    border: 3px orange solid;
+}
+.unit[star="7"] {
+    border: 3px rgb(242, 57, 149) solid;
+}
+.unit[star="8"] {
+    border: 3px cyan solid;
+}
+
+.type.magical {
+    background-image: url('/assets/magical-damage.png');
+}
+.type.physical {
+    background-image: url('/assets/physical-damage.png');
+}
+.type {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    transform: scale(0.8);
+    transform-origin: bottom right;
+    right: 1px;
+    bottom: 1px;
+}

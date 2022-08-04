@@ -8,15 +8,32 @@
     <link rel="icon" stype="image/x-icon" href="/assets/2388.ico">
     <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/units/style.css">
 </head>
 <body>
     <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="/units/data/human.js"></script>
+    <script type="text/javascript" src="/units/data/elf.js"></script>
+    <script type="text/javascript" src="/units/data/undead.js"></script>
+    <script type="text/javascript" src="/units/data/orc.js"></script>
+    
     <script>
     insertTemplate()
     document.getElementById('units-page').classList.add('active')
+    document.getElementById('units-page-menu').classList.add('active')
     </script>
     <div class="content">
-        units page
+        <h1>Unit Book</h1>
+        <div class="options">
+            <a class="button units-button" id="units-human" href="/units/?tribe=human">Human</a>
+            <a class="button units-button" id="units-elf" href="/units/?tribe=elf">Elf</a>
+            <a class="button units-button" id="units-undead" href="/units/?tribe=undead">Undead</a>
+            <a class="button units-button" id="units-orc" href="/units/?tribe=orc">Orc</a>
+        </div>
+        <div class="grid" id="grid">
+
+        </div>
     </div>
+    <script type="text/javascript" src="/units/script.js"></script>
 </body>
 </html>
