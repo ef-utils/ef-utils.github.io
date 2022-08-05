@@ -45,13 +45,13 @@ const template = `
     </div>
     <div class="mobile-menu-links">
         <a href='/'>
-            <div class="mobile-menu-link active">Home</div>
+            <div class="mobile-menu-link" id="home-menu-link">Home</div>
         </a>
         <a class="mobile-menu-item" href='https://github.com/ef-utils'>
             <div class="mobile-menu-link">GitHub</div>
         </a>
         <a class="mobile-menu-item" href='/about'>
-            <div class="mobile-menu-link">About</div>
+            <div class="mobile-menu-link" id="about-menu-link">About</div>
         </a>
         <a class="mobile-menu-item" href='/'>
             <div class="button">Invite</div>
