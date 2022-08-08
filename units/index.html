@@ -22,17 +22,72 @@
     document.getElementById('units-page-menu').classList.add('active')
     </script>
     <div class="content">
-        <h1>Unit Book</h1>
-        <div class="options">
-            <a class="button units-button" id="units-human" href="/units/?tribe=human">Human</a>
-            <a class="button units-button" id="units-elf" href="/units/?tribe=elf">Elf</a>
-            <a class="button units-button" id="units-undead" href="/units/?tribe=undead">Undead</a>
-            <a class="button units-button" id="units-orc" href="/units/?tribe=orc">Orc</a>
+
+        <div class="tribe" id="tribe">
+            <h1>Unit Book</h1>
+            <div class="options">
+                <a class="button units-button" id="units-human" href="/units/?tribe=human">Human</a>
+                <a class="button units-button" id="units-elf" href="/units/?tribe=elf">Elf</a>
+                <a class="button units-button" id="units-undead" href="/units/?tribe=undead">Undead</a>
+                <a class="button units-button" id="units-orc" href="/units/?tribe=orc">Orc</a>
+            </div>
+            <div class="grid" id="grid">
+    
+            </div>
         </div>
-        <div class="grid" id="grid">
+
+        <div id="unit">
+            <div id="unit-icons">
+
+            </div>
+            
+            <h1 id="unit-name"></h1>
+            <div id="unit-evolutions">
+                
+            </div>
+
+            <h4 class="unit-menu"><span class="unit-menu-link" onclick="unitMenu(0)">Details</span> | <span class="unit-menu-link" onclick="unitMenu(1)">Skills</span> | <span class="unit-menu-link" onclick="unitMenu(2)">Equipment</span></h4>
+            
+            <div name="details" id="details">
+                <div id="unit-stats">
+                    Attack: 
+                    <br>HP: 
+                    <br>Physical Defense: 
+                    <br>Magical Defense: 
+                    <br>Attack Speed: 
+                    <br>Attack Range: 
+                    <br>Movement Speed: 
+                    <br>Critical Rate: 
+                    <br>Critical Damage: 
+                    <br>Respawn Time: 
+                </div>
+                <div id="battle">
+                    <h3 ># Battle</h3>
+                </div>
+                <div id="special-ability">
+                    <h3 id="unit-special-ability"># Special Ability</h3>
+                </div>
+                <div id="pet">
+                    <h3 ># Pets</h3>
+                    <div id="unit-pet"></div>
+                </div>
+                <h3 id="unit-tribe-skill">Tribe Skill: </h3>
+                <div id="full-art"></div>
+            </div>
+
+            <div name="skills" id="skills">
+
+            </div>
+            
+            <div name="equipment" id="equipment">
+                equipment
+            </div>
+
 
         </div>
+
     </div>
     <script type="text/javascript" src="/units/script.js"></script>
+    <script>unitMenu(0)</script>
 </body>
 </html>

@@ -17,28 +17,28 @@
 }
 
 .unit[star="1"] {
-    border: 3px gray solid;
+    border: 3px #5d5d5d solid;
 }
 .unit[star="2"] {
-    border: 3px green solid;
+    border: 3px #649501 solid;
 }
 .unit[star="3"] {
-    border: 3px rgb(58, 58, 216) solid;
+    border: 3px #3399ff solid;
 }
 .unit[star="4"] {
-    border: 3px rgb(137, 75, 199) solid;
+    border: 3px #c632c6 solid;
 }
 .unit[star="5"] {
-    border: 3px red solid;
+    border: 3px #f73201 solid;
 }
 .unit[star="6"] {
-    border: 3px orange solid;
+    border: 3px #ff9900 solid;
 }
 .unit[star="7"] {
-    border: 3px rgb(242, 57, 149) solid;
+    border: 3px #f70195 solid;
 }
 .unit[star="8"] {
-    border: 3px cyan solid;
+    border: 3px #87ffff solid;
 }
 
 .type.magical {
@@ -55,4 +55,92 @@
     transform-origin: bottom right;
     right: 1px;
     bottom: 1px;
+}
+
+#unit-icons {
+    float: right;
+    position: relative;
+    top: 20px;
+}
+
+.unit-icon {
+    width: 24px;
+    height: 24px;
+    top: 20px;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    margin-left: 3px;
+}
+
+#unit h3 {
+    color: #98b51b;
+}
+
+#unit p {
+    margin: 0;
+}
+
+#battle {
+    text-indent: -15px;
+    padding-left: 15px;
+}
+
+#unit-tribe-skill {
+    color: #64abbc !important;
+}
+
+#unit-evolutions {
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.unit-evolution {
+    height: calc(72px - 6px);
+    width: calc(72px - 6px);
+}
+
+@media only screen and (max-width: 700px) {
+    #unit-evolutions {
+        float: none;
+    }
+}
+
+.unit-menu {
+    text-align: center;
+    grid-area: m;
+    user-select: none;
+}
+
+.unit-menu-link {
+    cursor: pointer;
+    color: var(--accent);
+}
+
+.unit-menu-link:hover {
+    filter: brightness(75%)
+}
+
+.unit-menu h4 {
+    line-height: 0px;
+}
+
+#full-art {
+    width: 320px;
+    height: 320px;
+    background: rgba(122, 122, 122, 0.3);
+    border-radius: 0.5rem;
+    margin-top: 50px;
+    margin-left: calc((100% - 320px) / 2);
+    margin-bottom: 50px;
+    background-position: center;
+    background-size: contain;
+}
+
+#unit-pet {
+    width: 72px;
+    height: 72px;
+    background-color: var(--light);
 }

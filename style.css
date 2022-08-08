@@ -174,7 +174,7 @@ body {
     color: var(--accent)
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 800px) {
     .mobile-menu-button {
         display: initial;
     }
