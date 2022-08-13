@@ -71,7 +71,16 @@ function loadUnit(unitId) {
             div.style.backgroundImage = `url('/assets/icons/${icon}.png')`
             icons.append(div)
         }
-    }3
+    }
+
+    for (i = 0; i < unit.stars; i++) {
+        img = document.createElement('img')
+        img.src = '/assets/star.png'
+        document.getElementById('unit-stars').append(img)
+    }
+
+    back = document.getElementById('unit-back')
+    back.href = `/units/?tribe=${unit.tribe}`
 
     evolutions = document.getElementById('unit-evolutions')
     for (evolution of unit.details.evolutions) {
@@ -89,6 +98,10 @@ function loadUnit(unitId) {
         type.classList.add('type')
         type.classList.add(data.type)
         div.append(type)
+
+        if (evolution === unit.id) {
+            div.style.filter = 'brightness(70%)'
+        }
 
         evolutions.append(div)
     }
