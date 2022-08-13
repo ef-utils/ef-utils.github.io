@@ -23,7 +23,9 @@ function toggleSideBar(option) {
 }
 
 window.onclick = (function(e) { // close sidebar after click
-    if (e.target == document.getElementById('mobile-menu-button')) { return }
+    if (e.target.id.includes('mobile')) {
+        return
+    }
     if (sidebar == true) {
         toggleSideBar(false)
     }
@@ -32,7 +34,7 @@ window.onclick = (function(e) { // close sidebar after click
 const template = `
 <div class="mobile-menu hidden" id="mobile-menu">
     <script>toggleSideBar(false)</script>
-    <div class="mobile-menu-pages">
+    <div class="mobile-menu-pages" id="mobile-menu-pages">
         <a href="/units" class="mobile-menu-page">
             <div id="units-page-menu">&nbsp/units</div>
         </a>
@@ -43,7 +45,7 @@ const template = `
             <div id="artifacts-page-menu">&nbsp/artifacts</div>
         </a>
     </div>
-    <div class="mobile-menu-links">
+    <div class="mobile-menu-links" id="mobile-menu-links">
         <a href='/'>
             <div class="mobile-menu-link" id="home-menu-link">Home</div>
         </a>

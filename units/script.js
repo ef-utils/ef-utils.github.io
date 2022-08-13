@@ -114,9 +114,9 @@ function loadUnit(unitId) {
         <br>Attack Speed: ${unit.details.attackSpeed}
         <br>Attack Range: ${unit.details.attackRange}
         <br>Movement Speed: ${unit.details.movementSpeed}
-        <br>Critical Rate: ${unit.details.criticalRate}
-        <br>Critical Damage: ${unit.details.criticalDamage}
-        <br>Respawn Time: ${unit.details.respawnTime}
+        <br>Critical Rate: ${unit.details.criticalRate}%
+        <br>Critical Damage: ${unit.details.criticalDamage}%
+        <br>Respawn Time: ${unit.details.respawnTime}s
     `
 
     battle = document.getElementById('battle')

@@ -1246,6 +1246,86 @@ const human = [
         'image': '0015',
         'stars': 5,
         'type': 'magical',
+        'fullArt': '16',
+        'sex': 'female',
+        'airAttack': false,
+        'cloakingDetection': false,
+        'specialUnit': 0,
+        'details': {
+            'baseAttack': 42,
+            'baseHP': 202.5,
+            'basePhysicalDefense': 2.4,
+            'baseMagicalDefense': 3.9,
+            'attackSpeed': 60,
+            'attackRange': 280,
+            'movementSpeed': 7.20,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [15, 16, 238],
+            'pet': null,
+            'battle': [
+                'Normal Attack: By summoning a strong fireball, deal tremendous damage to ground targets and neighboring enemies, stun enemies randomly',
+                'Skill Attack: Summon a swarm of fire bird that attack mid-air and ground units, the enemies attacked by the fire birds will be stunned randomly',
+            ],
+            'specialAbility': ['None'],
+            'tribeSkill': 'None (only evolved units can have tribe skills)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Own Attack Distance Increased: 5%",
+            },
+            {
+                'level': 50,
+                'skill': "Quest Gold Increased: 24%",
+            },
+            {
+                'level': 100,
+                'skill': "Own Critical Strike Rate Increased: 3%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 300,
+                'skill': "Own Critical Strike Damage Increased: 70%",
+            },
+            {
+                'level': 500,
+                'skill': "Own Critical Strike Rate Increased: 3%",
+            },
+            {
+                'level': 700,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 900,
+                'skill': "Own Critical Strike Damage Increased: 70%",
+            },
+            {
+                'level': 1100,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 50%",
+            },
+            {
+                'level': 1200,
+                'skill': "Own Attack Power Increased: 100%",
+            },
+            {
+                'level': 1300,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 300%",
+            },
+            {
+                'level': 1400,
+                'skill': "Ranged units' Attack Power Increased: 400%",
+            },
+            {
+                'level': 1500,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 1.5a%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Senior Fire Mage',
@@ -1254,6 +1334,108 @@ const human = [
         'image': '0016',
         'stars': 6,
         'type': 'magical',
+        'fullArt': '16',
+        'sex': 'female',
+        'airAttack': false,
+        'cloakingDetection': false,
+        'specialUnit': 0,
+        'details': {
+            'baseAttack': 72,
+            'baseHP': 351,
+            'basePhysicalDefense': 4,
+            'baseMagicalDefense': 6.5,
+            'attackSpeed': 60,
+            'attackRange': 280,
+            'movementSpeed': 7.20,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [15, 16, 238],
+            'pet': 8,
+            'battle': [
+                'Normal Attack: By summoning a strong fireball , deal tremendous damage to ground targets and neighboring enemies, stun enemies randomly',
+                'Skill Attack: Summon a swarm of fire birds that attack mid-air and ground units, the enemies attacked by the fire birds will be stunned randomly',
+                'Never gets blown away. ',
+                'Never gets knocked back. ',
+            ],
+            'specialAbility': ['None'],
+            'tribeSkill': 'Human Tribe Skill: A covenant betwqeen Human units and the Earth Spirit that grants immunity to knock-back attacks (Immune to knock-back)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Own Attack Distance Increased: 9%",
+            },
+            {
+                'level': 50,
+                'skill': "Quest Gold Increased: 28%",
+            },
+            {
+                'level': 100,
+                'skill': "Own Critical Strike Rate Increased: 4%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Attack Power Increased: 31%",
+            },
+            {
+                'level': 300,
+                'skill': "Own Critical Strike Damage Increased: 95%",
+            },
+            {
+                'level': 500,
+                'skill': "Own Critical Strike Rate Increased: 4%",
+            },
+            {
+                'level': 700,
+                'skill': "Own Attack Power Increased: 31%",
+            },
+            {
+                'level': 900,
+                'skill': "Own Critical Strike Damage Increased: 95%",
+            },
+            {
+                'level': 1100,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 100%",
+            },
+            {
+                'level': 1200,
+                'skill': "Own Attack Power Increased: 300%",
+            },
+            {
+                'level': 1300,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 700%",
+            },
+            {
+                'level': 1400,
+                'skill': "Ranged units' Attack Power Increased: 800%",
+            },
+            {
+                'level': 1500,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 3a%",
+            },
+            {
+                'level': 1600,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 20a%",
+            },
+            {
+                'level': 1700,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 147a%",
+            },
+            {
+                'level': 1800,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 210a%",
+            },
+            {
+                'level': 1900,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 1.1b%",
+            },
+            {
+                'level': 2000,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 2.2b%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Gunner',
