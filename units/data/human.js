@@ -1444,6 +1444,86 @@ const human = [
         'image': '0017',
         'stars': 5,
         'type': 'magical',
+        'fullArt': '18',
+        'sex': 'male',
+        'airAttack': true,
+        'cloakingDetection': true,
+        'specialUnit': 0,
+        'details': {
+            'baseAttack': 33,
+            'baseHP': 189,
+            'basePhysicalDefense': 2.4,
+            'baseMagicalDefense': 2.4,
+            'attackSpeed': 50,
+            'attackRange': 260,
+            'movementSpeed': 8.10,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [17, 18, 242],
+            'pet': null,
+            'battle': [
+                'Normal Attack: Damage air unit and ground units with a magic cannonball. When it explodes, surrounding enemies will be splash damaged and stunned for a short amount of time. ',
+                'Skill Attack: Damage air unit and ground units with a number of magic cannonballs, when they explode, surrounding enemies will be splash damaged and stunned for a short amount of time. ',
+            ],
+            'specialAbility': ['None'],
+            'tribeSkill': 'None (only evolved units can have tribe skills)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 50,
+                'skill': "Gold Gain Increased during the battle: 24%",
+            },
+            {
+                'level': 100,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 5%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 300,
+                'skill': "Own Critical Strike Damage Increased: 70%",
+            },
+            {
+                'level': 500,
+                'skill': "Quest Gold Increased: 24%",
+            },
+            {
+                'level': 700,
+                'skill': "Own Critical Strike Rate Increased: 3%",
+            },
+            {
+                'level': 900,
+                'skill': "Own Critical Strike Rate Increased: 3%",
+            },
+            {
+                'level': 1100,
+                'skill': "Own Attack Power Increased: 200%",
+            },
+            {
+                'level': 1200,
+                'skill': "Own Attack Power Increased: 200%",
+            },
+            {
+                'level': 1300,
+                'skill': "Ranged units' Attack Power Increased: 300%",
+            },
+            {
+                'level': 1400,
+                'skill': "Ranged units' Attack Power Increased: 600%",
+            },
+            {
+                'level': 1500,
+                'skill': "Ranged units' Critical Strike Damage Increased: 2a%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Senior Gunner',
@@ -1452,6 +1532,107 @@ const human = [
         'image': '0018',
         'stars': 6,
         'type': 'magical',
+        'fullArt': '18',
+        'sex': 'male',
+        'airAttack': true,
+        'cloakingDetection': true,
+        'specialUnit': 0,
+        'details': {
+            'baseAttack': 55,
+            'baseHP': 333,
+            'basePhysicalDefense': 4,
+            'baseMagicalDefense': 4,
+            'attackSpeed': 50,
+            'attackRange': 260,
+            'movementSpeed': 8.10,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [17, 18, 242],
+            'pet': 9,
+            'battle': [
+                'Normal Attack: Damage air unit and ground units with a magic cannonball. When it explodes, surrounding enemies will be splash damaged and stunned for a short amount of time. ',
+                'Skill Attack: Damage air unit and ground units with a number of magic cannonballs, when they explode, surrounding enemies will be splash damaged and stunned for a short amount of time. ',
+                'Never gets knocked back. '
+            ],
+            'specialAbility': ['None'],
+            'tribeSkill': 'A covenant between Human units and the Earth Spirit that grants immunity to knock-back attacks. (Immune to knock-back)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Own Attack Power Increased: 28%",
+            },
+            {
+                'level': 50,
+                'skill': "Gold Gain Increased during the battle: 27%",
+            },
+            {
+                'level': 100,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 10%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Attack Power Increased: 28%",
+            },
+            {
+                'level': 300,
+                'skill': "Own Critical Strike Damage Increased: 85%",
+            },
+            {
+                'level': 500,
+                'skill': "Quest Gold Increased: 26%",
+            },
+            {
+                'level': 700,
+                'skill': "Own Critical Strike Rate Increased: 4%",
+            },
+            {
+                'level': 900,
+                'skill': "Own Critical Strike Rate Increased: 4%",
+            },
+            {
+                'level': 1100,
+                'skill': "Own Attack Power Increased: 200%",
+            },
+            {
+                'level': 1200,
+                'skill': "Own Attack Power Increased: 200%",
+            },
+            {
+                'level': 1300,
+                'skill': "Ranged units' Attack Power Increased: 600%",
+            },
+            {
+                'level': 1400,
+                'skill': "Ranged units' Attack Power Increased: 1.2a%",
+            },
+            {
+                'level': 1500,
+                'skill': "Ranged units' Critical Strike Damage Increased: 4.8a%",
+            },
+            {
+                'level': 1600,
+                'skill': "One's(Own) Tribe's Attack power Increased: 40a%",
+            },
+            {
+                'level': 1700,
+                'skill': "Ranged units' Attack Power Increased: 126a%",
+            },
+            {
+                'level': 1800,
+                'skill': "Ranged units' Attack Power Increased: 380a%",
+            },
+            {
+                'level': 1900,
+                'skill': "Ranged units' Critical Strike Damage Increased: 600a%",
+            },
+            {
+                'level': 2000,
+                'skill': "Ranged units' Attack Power Increased: 3.4b%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Priest',
