@@ -69,6 +69,13 @@ function loadUnit(unitId) {
                 icon = eval(`unit.${icon}`)
             }
             div.style.backgroundImage = `url('/assets/icons/${icon}.png')`
+            console.log(icon)
+            if (icon === 'special') {
+                text = document.createElement('div')
+                text.textContent = unit.specialUnit
+                text.classList.add('unit-icon-text')
+                div.append(text)
+            }
             icons.append(div)
         }
     }

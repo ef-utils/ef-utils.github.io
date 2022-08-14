@@ -1641,6 +1641,86 @@ const human = [
         'image': '0094',
         'stars': 5,
         'type': 'magical',
+        'fullArt': '95',
+        'sex': 'female',
+        'airAttack': true,
+        'cloakingDetection': false,
+        'specialUnit': 1,
+        'details': {
+            'baseAttack': 36,
+            'baseHP': 153,
+            'basePhysicalDefense': 2.4,
+            'baseMagicalDefense': 3.9,
+            'attackSpeed': 60,
+            'attackRange': 280,
+            'movementSpeed': 8.55,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [94, 95, 258],
+            'pet': null,
+            'battle': [
+                'Normal Attack: By emitting a sacred light, stun enemies and knock them back',
+                'Skill Attack: Unfreeze and unstun up to 3 of your units, cast a blessing of god which forms a shield immune to stun and freeze for a certain amount of time. 10% of HP will be also restored. ',
+            ],
+            'specialAbility': ["God's Blessing: With 2% possibilities, 5 times speedup for 2 minues on every 10th floor (activation is applied based on accumulated possiblities)"],
+            'tribeSkill': 'None (only evolved units can have tribe skills)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Quest Gold Increased: 24%",
+            },
+            {
+                'level': 50,
+                'skill': "A chance to avoid ranged attack increased: 2%",
+            },
+            {
+                'level': 100,
+                'skill': "Own HP Increased: 46%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Defense Power Increased: 28%",
+            },
+            {
+                'level': 300,
+                'skill': "All units' Moving Speed Increased: 1%",
+            },
+            {
+                'level': 500,
+                'skill': "All units' HP Increased: 10%",
+            },
+            {
+                'level': 700,
+                'skill': "Own Attack Power Increased: 20%",
+            },
+            {
+                'level': 900,
+                'skill': "A chance to avoid ranged attack increased: 2%",
+            },
+            {
+                'level': 1100,
+                'skill': "All units' Defense Power Increased: 50%",
+            },
+            {
+                'level': 1200,
+                'skill': "All units' HP Increased: 50%",
+            },
+            {
+                'level': 1300,
+                'skill': "All units' Defense Power Increased: 200%",
+            },
+            {
+                'level': 1400,
+                'skill': "One's(Own) Tribe's Defense Power Increased: 400%",
+            },
+            {
+                'level': 1500,
+                'skill': "One's(Own) Tribe's HP Increased: 10a%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Senior Priest',
@@ -1649,6 +1729,107 @@ const human = [
         'image': '0095',
         'stars': 6,
         'type': 'magical',
+        'fullArt': '95',
+        'sex': 'female',
+        'airAttack': true,
+        'cloakingDetection': false,
+        'specialUnit': 1,
+        'details': {
+            'baseAttack': 60,
+            'baseHP': 265.5,
+            'basePhysicalDefense': 4,
+            'baseMagicalDefense': 6.5,
+            'attackSpeed': 60,
+            'attackRange': 280,
+            'movementSpeed': 8.55,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [94, 95, 258],
+            'pet': 0,
+            'battle': [
+                'Normal Attack: By emitting a sacred light, stun enemies and knock them back',
+                'Skill Attack: Unfreeze and unstun up to 3 of your units, cast a blessing of god which forms a shield immune to stun and freeze for a certain amount of time. 10% of HP will be also restored. ',
+                'Never gets knocked back. '
+            ],
+            'specialAbility': ["God's Blessing: With 5% possibilities, 5 times speedup for 2 minutes on every 10th floor (activation possibility is applied based on accumulation)"],
+            'tribeSkill': 'A covenant between Human units and the Earth Spirit that grants immunity to knock-back attacks. (Immune to knock-back)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Quest Gold Increased: 28%",
+            },
+            {
+                'level': 50,
+                'skill': "A chance to avoid ranged attack increased: 5%",
+            },
+            {
+                'level': 100,
+                'skill': "Own HP Increased: 61%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Defense Power Increased: 37%",
+            },
+            {
+                'level': 300,
+                'skill': "All units' Moving Speed Increased: 2%",
+            },
+            {
+                'level': 500,
+                'skill': "All units' HP Increased: 20%",
+            },
+            {
+                'level': 700,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 900,
+                'skill': "A chance to avoid ranged attack increased: 5%",
+            },
+            {
+                'level': 1100,
+                'skill': "All units' Defense Power Increased: 100%",
+            },
+            {
+                'level': 1200,
+                'skill': "All units' HP Increased: 100%",
+            },
+            {
+                'level': 1300,
+                'skill': "All units' Defense Power Increased: 400%",
+            },
+            {
+                'level': 1400,
+                'skill': "One's(Own) Tribe's Defense Power Increased: 800%",
+            },
+            {
+                'level': 1500,
+                'skill': "One's(Own) Tribe's HP Increased: 20a%",
+            },
+            {
+                'level': 1600,
+                'skill': "One's(Own) Tribe's Defense Power Increased: 40a%",
+            },
+            {
+                'level': 1700,
+                'skill': "One's(Own) Tribe's HP Increased: 800a%",
+            },
+            {
+                'level': 1800,
+                'skill': "One's(Own) Tribe's Defense Power Increased: 350a%",
+            },
+            {
+                'level': 1900,
+                'skill': "All units' Defense Power Increased: 500a%",
+            },
+            {
+                'level': 2000,
+                'skill': "One's(Own) Tribe's HP Increased: 24b%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Aladdin',

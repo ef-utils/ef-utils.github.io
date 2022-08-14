@@ -61,16 +61,29 @@
     float: right;
     position: relative;
     top: 20px;
+    height: 24px;
 }
 
 .unit-icon {
     width: 24px;
     height: 24px;
     top: 20px;
+    position: relative;
     display: inline-block;
     background-position: center;
     background-size: contain;
     margin-left: 3px;
+}
+
+.unit-icon-text {
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+    color: #c59723;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    user-select: none;
 }
 
 #unit h3 {
