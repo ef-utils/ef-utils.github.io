@@ -1838,6 +1838,90 @@ const human = [
         'image': '0104',
         'stars': 5,
         'type': 'physical',
+        'fullArt': '105',
+        'sex': 'male',
+        'airAttack': true,
+        'cloakingDetection': false,
+        'specialUnit': 2,
+        'details': {
+            'baseAttack': 30,
+            'baseHP': 170,
+            'basePhysicalDefense': 2.4,
+            'baseMagicalDefense': 3.9,
+            'attackSpeed': 60,
+            'attackRange': 290,
+            'movementSpeed': 10.45,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [104, 105, 269],
+            'pet': null,
+            'battle': [
+                'Normal Attack: Attacks an enemy by flinging a large golden coin (Range, air avaiable)',
+                'Skill Attack: Knocks back and stuns the enemies in front by summoning Genie of the magic Lamp) Knock-back Attack)',
+            ],
+            'specialAbility': [
+                "Human's Secret Skill: When operating Human's Secret Skill, the amount of gold given increases by 10 times by 5% possibility. ",
+                "Gold Acquisition: Scatters gold while moving",
+                "Immune to Ground: Since the body is floating slightly above the ground, it it unaffected by the vine attack of druids from the ground. "
+            ],
+            'tribeSkill': 'None (only evolved units can have tribe skills)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Quest Gold Increased: 300%",
+            },
+            {
+                'level': 50,
+                'skill': "Decrease the unit upgrade cost: 100%",
+            },
+            {
+                'level': 100,
+                'skill': "Quest Gold Increased: 300%",
+            },
+            {
+                'level': 200,
+                'skill': "Decrease the quest upgrade cost: 100%",
+            },
+            {
+                'level': 300,
+                'skill': "Quest Gold Increased: 300%",
+            },
+            {
+                'level': 500,
+                'skill': "Reduce the quest time: 50%",
+            },
+            {
+                'level': 700,
+                'skill': "Quest Gold Increased: 300%",
+            },
+            {
+                'level': 900,
+                'skill': "Decrease the quest upgrade cost: 200%",
+            },
+            {
+                'level': 1100,
+                'skill': "Quest Gold Increased: 300%",
+            },
+            {
+                'level': 1200,
+                'skill': "Decrease the unit upgrade cost: 100%",
+            },
+            {
+                'level': 1300,
+                'skill': "Quest Gold Increased: 1a%",
+            },
+            {
+                'level': 1400,
+                'skill': "Quest Gold Increased: 1.5a%",
+            },
+            {
+                'level': 1500,
+                'skill': "Quest Gold Increased: 2a%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Senior Aladdin',
@@ -1846,6 +1930,111 @@ const human = [
         'image': '0105',
         'stars': 6,
         'type': 'physical',
+        'fullArt': '105',
+        'sex': 'male',
+        'airAttack': true,
+        'cloakingDetection': false,
+        'specialUnit': 2,
+        'details': {
+            'baseAttack': 50,
+            'baseHP': 295,
+            'basePhysicalDefense': 4,
+            'baseMagicalDefense': 6.5,
+            'attackSpeed': 60,
+            'attackRange': 290,
+            'movementSpeed': 10.45,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [104, 105, 269],
+            'pet': 0,
+            'battle': [
+                'Normal Attack: Attacks an enemy by flinging a large golden coin (Range, air avaiable)',
+                'Skill Attack: Knocks back and stuns the enemies in front by summoning Genie of the Magic Lamp (Knock-back Attack)',
+                'Never gets knocked back. '
+            ],
+            'specialAbility': [
+                "Human's Secret Skill: When operating Human's Secret Skill, the amount of gold given increases by 10 times by 15% possibility. ",
+                "Gold Acquisition: Scatters gold while moving",
+                "Immune to Ground: Since the body is floating slightly above the ground, it it unaffected by the vine attack of druids from the ground. "
+            ],
+            'tribeSkill': 'A covenant between Human units and the Earth Spirit that grants immunity to knock-back attacks. (Immune to knock-back)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Quest Gold Increased: 600%",
+            },
+            {
+                'level': 50,
+                'skill': "Decrease the unit upgrade cost: 200%",
+            },
+            {
+                'level': 100,
+                'skill': "Quest Gold Increased: 600%",
+            },
+            {
+                'level': 200,
+                'skill': "Decrease the quest upgrade cost: 200%",
+            },
+            {
+                'level': 300,
+                'skill': "Quest Gold Increased: 600%",
+            },
+            {
+                'level': 500,
+                'skill': "Reduce the quest time: 100%",
+            },
+            {
+                'level': 700,
+                'skill': "Quest Gold Increased: 600%",
+            },
+            {
+                'level': 900,
+                'skill': "Decrease the quest upgrade cost: 300%",
+            },
+            {
+                'level': 1100,
+                'skill': "Quest Gold Increased: 600%",
+            },
+            {
+                'level': 1200,
+                'skill': "Decrease the unit upgrade cost: 300%",
+            },
+            {
+                'level': 1300,
+                'skill': "Quest Gold Increased: 2a%",
+            },
+            {
+                'level': 1400,
+                'skill': "Quest Gold Increased: 2.5a%",
+            },
+            {
+                'level': 1500,
+                'skill': "Quest Gold Increased: 3a%",
+            },
+            {
+                'level': 1600,
+                'skill': "Quest Gold Increased: 10a%",
+            },
+            {
+                'level': 1700,
+                'skill': "Quest Gold Increased: 30a%",
+            },
+            {
+                'level': 1800,
+                'skill': "Decrease the unit upgrade cost: 3a%",
+            },
+            {
+                'level': 1900,
+                'skill': "Quest Gold Increased: 300a%",
+            },
+            {
+                'level': 2000,
+                'skill': "Quest Gold Increased: 900a%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Griffin Rider',
@@ -1854,6 +2043,91 @@ const human = [
         'image': '0110',
         'stars': 5,
         'type': 'physical',
+        'fullArt': '111',
+        'sex': 'male',
+        'airAttack': true,
+        'cloakingDetection': false,
+        'specialUnit': 3,
+        'details': {
+            'baseAttack': 37.5,
+            'baseHP': 165,
+            'basePhysicalDefense': 2.4,
+            'baseMagicalDefense': 3.9,
+            'attackSpeed': 60,
+            'attackRange': 280,
+            'movementSpeed': 12.15,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [110, 111, 281],
+            'pet': null,
+            'battle': [
+                'Normal Attack: Throws two long spears. knocks back and stun the enemy for a certain amount of time. ',
+                'Skill Attack: Throws several spears with 1.5 times damage, knocks back and stuns the enemy for a while. ',
+                'Team Buff: Increases the movement speed of each air unit in the team by 0.3%. In case of guild war, Increases by 0.03%. (If possessing 5 air units, Increases the movement speed by 1.5%. (Guild war: Increases by 0.15%))',
+                'Never gets blown away. '
+            ],
+            'specialAbility': [
+                'Offline March: Increases offline marching speed by 5%',
+                'Makes oneself invisible at a regular rate and avoid all range attacks when attacked by enemies. '
+            ],
+            'tribeSkill': 'None (only evolved units can have tribe skills)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 50,
+                'skill': "Own HP Increased: 46%",
+            },
+            {
+                'level': 100,
+                'skill': "One's(Own) Tribe's Moving Speed Increased: 1%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Attack Power Increased: 23%",
+            },
+            {
+                'level': 300,
+                'skill': "Own Attack Distance Increased: 2%",
+            },
+            {
+                'level': 500,
+                'skill': "One's(Own) Tribe's Moving Speed Increased: 1%",
+            },
+            {
+                'level': 700,
+                'skill': "A chance to avoid ranged attack increased: 2%",
+            },
+            {
+                'level': 900,
+                'skill': "Own Critical Strike Damage Increased: 60%",
+            },
+            {
+                'level': 1100,
+                'skill': "Own Critical Strike Damage Increased: 100%",
+            },
+            {
+                'level': 1200,
+                'skill': "Own Critical Strike Rate Increased: 2%",
+            },
+            {
+                'level': 1300,
+                'skill': "One's(Own) Tribe's Attack Speed Increased: 1%",
+            },
+            {
+                'level': 1400,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 500%",
+            },
+            {
+                'level': 1500,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 2a%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Senior Griffin Rider',
@@ -1862,6 +2136,112 @@ const human = [
         'image': '0111',
         'stars': 6,
         'type': 'physical',
+        'fullArt': '111',
+        'sex': 'male',
+        'airAttack': true,
+        'cloakingDetection': false,
+        'specialUnit': 3,
+        'details': {
+            'baseAttack': 60,
+            'baseHP': 285,
+            'basePhysicalDefense': 4,
+            'baseMagicalDefense': 6.5,
+            'attackSpeed': 60,
+            'attackRange': 280,
+            'movementSpeed': 12.15,
+            'criticalRate': 20,
+            'criticalDamage': 50.0,
+            'respawnTime': 150,
+            'evolutions': [110, 111, 281],
+            'pet': 0,
+            'battle': [
+                'Normal Attack: Throws two long spears. knocks back and stuns the enemmy for a while. ',
+                'Skill Attack: Throws several spears with two times damage, knocks back and stuns the enemy for a while. ',
+                'Team Buff: Increases the movement speed of each air unit in the team by 0.7%. In case of guild war, Increases by 0.07%. (If possessing 5 air units, Increases the movement speed by 3.5%. (Guild war: Increases by 0.35%))',
+                'Never gets blown away. ',
+                'Never gets knocked back. '
+            ],
+            'specialAbility': [
+                'Offline March: Increases offline marching speed by 15%. ',
+                'Makes oneself invisible at a regular rate and avoids all range attacks when attacked by enemies. '
+            ],
+            'tribeSkill': 'A covenant between Human units and the Earth Spirit that grants immunity to knock-back attacks. (Immune to knock-back)'
+        },
+        'skills': [
+            {
+                'level': 25,
+                'skill': "Own Attack Power Increased: 31%",
+            },
+            {
+                'level': 50,
+                'skill': "Own HP Increased: 61%",
+            },
+            {
+                'level': 100,
+                'skill': "One's(Own) Tribe's Moving Speed Increased: 2%",
+            },
+            {
+                'level': 200,
+                'skill': "Own Attack Power Increased: 31%",
+            },
+            {
+                'level': 300,
+                'skill': "Own Attack Distance Increased: 3%",
+            },
+            {
+                'level': 500,
+                'skill': "One's(Own) Tribe's Moving Speed Increased: 2%",
+            },
+            {
+                'level': 700,
+                'skill': "A chance to avoid ranged attack increased: 5%",
+            },
+            {
+                'level': 900,
+                'skill': "Own Critical Strike Damage Increased: 95%",
+            },
+            {
+                'level': 1100,
+                'skill': "Own Critical Strike Damage Increased: 200%",
+            },
+            {
+                'level': 1200,
+                'skill': "Own Critical Strike Rate Increased: 4%",
+            },
+            {
+                'level': 1300,
+                'skill': "One's(Own) Tribe's Attack Speed Increased: 2%",
+            },
+            {
+                'level': 1400,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 1a%",
+            },
+            {
+                'level': 1500,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 4a%",
+            },
+            {
+                'level': 1600,
+                'skill': "Ranged units' Attack Power Increased: 42a%",
+            },
+            {
+                'level': 1700,
+                'skill': "Ranged units' Critical Strike Damage Increased: 70a%",
+            },
+            {
+                'level': 1800,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 210a%",
+            },
+            {
+                'level': 1900,
+                'skill': "One's(Own) Tribe's Attack Power Increased: 1.1b%",
+            },
+            {
+                'level': 2000,
+                'skill': "One's(Own) Tribe's Critical Strike Damage Increased: 3.3ba%",
+            }
+        ],
+        'equipment': []
     },
     {
         'name': 'Hot-Blooded Xuanzang',
