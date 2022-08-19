@@ -1,3 +1,24 @@
+var datas;
+var tempHuman;
+var tempElf;
+var tempUndead;
+var tempOrc;
+
+fetch('https://ef-utils.deta.dev')
+    .then((response) => response.json())
+    .then((data) => {
+        datas = data
+        human = datas['units']['human']
+        elf = datas['units']['elf']
+        undead = datas['units']['undead']
+        orc = datas['units']['orc']
+        if (userQueryUnit !== null) { // prioritize unit
+            loadUnit(userQueryUnit)
+        } else {
+            loadTribe(userQuery)
+        }
+    })
+
 function gridColumns() {
     grid = document.querySelector('.grid')
     if (window.innerWidth - 100 < 564) {
@@ -24,20 +45,14 @@ if (userQuery !== 'human' &&
 
 if (userQueryUnit !== null) { // prioritize unit
     document.getElementById('tribe').style.display = 'none'
-    loadUnit(userQueryUnit)
 } else {
     document.getElementById('unit').style.display = 'none'
     gridColumns()
     window.onresize = gridColumns
-    loadTribe(userQuery)
 }
 
-function getJsonById(id) {
-    tempHuman = eval('human')
-    tempElf = eval('elf')
-    tempUndead = eval('undead')
-    tempOrc = eval('orc')
-    tribes = [tempHuman, tempElf, tempUndead, tempOrc]
+function getUnitById(id) {
+    tribes = [human, elf, undead, orc]
     for (tribe of tribes) {
         for (unit of tribe) {
             if (unit['id'] == id) {
@@ -48,7 +63,7 @@ function getJsonById(id) {
 }
 
 function loadUnit(unitId) {
-    var unit = getJsonById(unitId)
+    var unit = getUnitById(unitId)
 
     document.getElementById('unit-name').textContent = unit['name']
 
@@ -64,18 +79,14 @@ function loadUnit(unitId) {
                 icon = 'cloak'
             } else if (icon === 'specialUnit') {
                 icon = 'special'
-                //
-            } else {
-                icon = eval(`unit.${icon}`)
-            }
-            div.style.backgroundImage = `url('/assets/icons/${icon}.png')`
-            console.log(icon)
-            if (icon === 'special') {
                 text = document.createElement('div')
                 text.textContent = unit.specialUnit
                 text.classList.add('unit-icon-text')
                 div.append(text)
+            } else {
+                icon = eval(`unit.${icon}`)
             }
+            div.style.backgroundImage = `url('/assets/icons/${icon}.png')`
             icons.append(div)
         }
     }
@@ -94,19 +105,19 @@ function loadUnit(unitId) {
         div = document.createElement('a')
         div.classList.add('unit-evolution')
 
-        data = getJsonById(evolution)
+        var data = getUnitById(evolution)
 
         div.style.backgroundImage = `url('/assets/units/${data.image}.png')`
         div.classList.add('unit')
         div.setAttribute('star', data.stars)
-        div.href = `/units/?unit=${data.id}`
+        div.href = `/units/?unit=${evolution}`
 
         type = document.createElement('div')
         type.classList.add('type')
         type.classList.add(data.type)
         div.append(type)
 
-        if (evolution === unit.id) {
+        if (`${evolution}` === unitId) {
             div.style.filter = 'brightness(70%)'
         }
 
