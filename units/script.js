@@ -176,6 +176,39 @@ function loadUnit(unitId) {
 
     fullArt = document.getElementById('full-art')
     fullArt.style.backgroundImage = `url('/assets/full-art/${unit.fullArt}.png')`
+
+    if (unit.transMaterial !== null) {
+        document.getElementById('hide-trans-material').style.display = ''
+        var page = document.getElementById('trans-material')
+        for (level in unit.transMaterial) {
+            
+            div = document.createElement('div')
+            div.textContent = `# Trans Material ${parseInt(level) + 1}`
+
+            div2 = document.createElement('div')
+            div2.classList.add('trans-material-list')
+
+            for (unitMaterial of unit.transMaterial[level]) {
+                link = document.createElement('a')
+                link.classList.add('unit-evolution')
+
+                var data2 = getUnitById(unitMaterial)
+
+                link.style.backgroundImage = `url('/assets/units/${data2.image}.png')`
+                link.classList.add('unit')
+                link.setAttribute('star', data2.stars)
+                link.href = `/units/?unit=${data2.id}`
+
+                type = document.createElement('div')
+                type.classList.add('type')
+                type.classList.add(data2.type)
+                link.append(type)
+                div2.append(link)
+            }
+            page.append(div)
+            page.append(div2)
+        }
+    }
 }
 
 function loadTribe(tribe) {
@@ -207,20 +240,29 @@ function loadTribe(tribe) {
 
 var details = document.getElementById('details')
 var skills = document.getElementById('skills')
+var material = document.getElementById('trans-material')
 var equipment = document.getElementById('equipment')
 
 function unitMenu(n) {
     if (n == 0) {
         details.style.display = ''
         skills.style.display = 'none'
+        material.style.display = 'none'
         equipment.style.display = 'none'
     } else if (n == 1) {
         details.style.display = 'none'
         skills.style.display = ''
+        material.style.display = 'none'
         equipment.style.display = 'none'
     } else if (n == 2) {
         details.style.display = 'none'
         skills.style.display = 'none'
+        material.style.display = ''
+        equipment.style.display = 'none'
+    } else if (n == 3) {
+        details.style.display = 'none'
+        skills.style.display = 'none'
+        material.style.display = 'none'
         equipment.style.display = ''
     }
 }
