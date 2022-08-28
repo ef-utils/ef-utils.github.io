@@ -28,7 +28,6 @@ function gridColumns() {
     }
     grid.style.gridTemplateColumns = `repeat(${columns}, 72px)`
     document.getElementsByClassName('content')[0].style.width = `${(columns * 72) + ((columns - 1) * 10)}px`
-
 }
 
 var queryString = window.location.search
@@ -65,6 +64,8 @@ function getUnitById(id) {
 function loadUnit(unitId) {
     var unit = getUnitById(unitId)
 
+    document.title = unit.name
+
     document.getElementById('unit-name').textContent = unit['name']
 
     icons = document.getElementById('unit-icons')
@@ -74,9 +75,9 @@ function loadUnit(unitId) {
             div = document.createElement('div')
             div.classList.add('unit-icon')
             if (icon === 'airAttack') {
-                icon = 'air'
+                icon = 'air attack'
             } else if (icon === 'cloakingDetection') {
-                icon = 'cloak'
+                icon = 'cloak detection'
             } else if (icon === 'specialUnit') {
                 icon = 'special'
                 text = document.createElement('div')
@@ -87,6 +88,7 @@ function loadUnit(unitId) {
                 icon = eval(`unit.${icon}`)
             }
             div.style.backgroundImage = `url('/assets/icons/${icon}.png')`
+            div.setAttribute('title', icon)
             icons.append(div)
         }
     }
