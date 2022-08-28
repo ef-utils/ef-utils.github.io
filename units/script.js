@@ -1,23 +1,51 @@
 var datas;
-var tempHuman;
-var tempElf;
-var tempUndead;
-var tempOrc;
+var human;
+var elf;
+var undead;
+var orc;
 
-fetch('https://ef-utils.deta.dev')
-    .then((response) => response.json())
-    .then((data) => {
-        datas = data
-        human = datas['units']['human']
-        elf = datas['units']['elf']
-        undead = datas['units']['undead']
-        orc = datas['units']['orc']
-        if (userQueryUnit !== null) { // prioritize unit
-            loadUnit(userQueryUnit)
-        } else {
-            loadTribe(userQuery)
-        }
-    })
+var queryString = window.location.search
+var urlParams = new URLSearchParams(queryString)
+var userQuery = urlParams.get('tribe')
+var userQueryUnit = urlParams.get('unit')
+
+if (userQuery !== 'human' && 
+    userQuery !== 'elf' && 
+    userQuery !== 'undead' && 
+    userQuery !== 'orc') { userQuery = 'human' }
+
+if (sessionStorage['data'] && typeof sessionStorage['data'] !== 'undefined' && sessionStorage['data'] !== 'null') {
+    datas = JSON.parse(sessionStorage.getItem('data'))
+    human = datas['units']['human']
+    elf = datas['units']['elf']
+    undead = datas['units']['undead']
+    orc = datas['units']['orc']
+    if (userQueryUnit !== null) { // prioritize unit
+        loadUnit(userQueryUnit)
+    } else {
+        loadTribe(userQuery)
+    }
+} else {
+    fetch('https://ef-utils.deta.dev')
+        .then((response) => response.json())
+        .then((data) => {
+            datas = data
+            try {
+                sessionStorage.setItem('data', JSON.stringify(datas))
+            } catch {
+                console.log(e)
+            }
+            human = datas['units']['human']
+            elf = datas['units']['elf']
+            undead = datas['units']['undead']
+            orc = datas['units']['orc']
+            if (userQueryUnit !== null) { // prioritize unit
+                loadUnit(userQueryUnit)
+            } else {
+                loadTribe(userQuery)
+            }
+        })
+}
 
 function gridColumns() {
     grid = document.querySelector('.grid')
@@ -29,16 +57,6 @@ function gridColumns() {
     grid.style.gridTemplateColumns = `repeat(${columns}, 72px)`
     document.getElementsByClassName('content')[0].style.width = `${(columns * 72) + ((columns - 1) * 10)}px`
 }
-
-var queryString = window.location.search
-var urlParams = new URLSearchParams(queryString)
-var userQuery = urlParams.get('tribe')
-var userQueryUnit = urlParams.get('unit')
-
-if (userQuery !== 'human' && 
-    userQuery !== 'elf' && 
-    userQuery !== 'undead' && 
-    userQuery !== 'orc') { userQuery = 'human' }
 
 // check valid unit
 
