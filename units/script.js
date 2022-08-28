@@ -115,26 +115,14 @@ function loadUnit(unitId) {
 
     evolutions = document.getElementById('unit-evolutions')
     for (evolution of unit.details.evolutions) {
-        div = document.createElement('a')
-        div.classList.add('unit-evolution')
-
-        var data = getUnitById(evolution)
-
-        div.style.backgroundImage = `url('/assets/units/${data.image}.png')`
-        div.classList.add('unit')
-        div.setAttribute('star', data.stars)
-        div.href = `/units/?unit=${evolution}`
-
-        type = document.createElement('div')
-        type.classList.add('type')
-        type.classList.add(data.type)
-        div.append(type)
-
+        var jsonData = getUnitById(evolution)
+        var ele = getUnitImageLink(jsonData)
+        ele.classList.add('unit-evolution')
+        console.log(evolution, jsonData.id)
         if (`${evolution}` === unitId) {
-            div.style.filter = 'brightness(70%)'
+            ele.style.filter = 'brightness(70%)'
         }
-
-        evolutions.append(div)
+        evolutions.append(ele)
     }
 
     document.getElementById('unit-stats').innerHTML = `
@@ -195,31 +183,20 @@ function loadUnit(unitId) {
         var page = document.getElementById('trans-material')
         for (level in unit.transMaterial) {
             
-            div = document.createElement('div')
-            div.textContent = `# Trans Material ${parseInt(level) + 1}`
+            materialListTitle = document.createElement('div')
+            materialListTitle.textContent = `# Trans Material ${parseInt(level) + 1}`
 
-            div2 = document.createElement('div')
-            div2.classList.add('trans-material-list')
+            materialList = document.createElement('div')
+            materialList.classList.add('trans-material-list')
 
             for (unitMaterial of unit.transMaterial[level]) {
-                link = document.createElement('a')
-                link.classList.add('unit-evolution')
-
-                var data2 = getUnitById(unitMaterial)
-
-                link.style.backgroundImage = `url('/assets/units/${data2.image}.png')`
-                link.classList.add('unit')
-                link.setAttribute('star', data2.stars)
-                link.href = `/units/?unit=${data2.id}`
-
-                type = document.createElement('div')
-                type.classList.add('type')
-                type.classList.add(data2.type)
-                link.append(type)
-                div2.append(link)
+                var jsonData = getUnitById(unitMaterial)
+                var ele = getUnitImageLink(jsonData)
+                ele.classList.add('unit-evolution')
+                materialList.append(ele)
             }
-            page.append(div)
-            page.append(div2)
+            page.append(materialListTitle)
+            page.append(materialList)
         }
     }
 }
@@ -233,23 +210,10 @@ function loadTribe(tribe) {
         return b.stars - a.stars;
     });
 
+    var grid = document.getElementById('grid')
+    
     for (i = 0; i < jsonData.length; i++) {
-        ele = document.createElement('a')
-        ele.setAttribute('star', jsonData[i]['stars'])
-        ele.classList.add('unit')
-        ele.style.backgroundImage = `url('/assets/units/${jsonData[i]['image']}.png')`
-        ele.id = jsonData[i]['id']
-        ele.href = `/units/?unit=${jsonData[i]['id']}`
-
-        type = document.createElement('div')
-        type.classList.add('type')
-        type.classList.add(jsonData[i]['type'])
-        ele.append(type)
-
-        ele.setAttribute('name', jsonData[i]['name'])
-        ele.title = jsonData[i]['name']
-
-        grid = document.getElementById('grid')
+        var ele = getUnitImageLink(jsonData[i])
         grid.append(ele)
     }
 }
@@ -281,6 +245,25 @@ function unitMenu(n) {
         material.style.display = 'none'
         equipment.style.display = ''
     }
+}
+
+function getUnitImageLink(unitData) {
+    var ele = document.createElement('a')
+    ele.setAttribute('star', unitData['stars'])
+    ele.classList.add('unit')
+    ele.style.backgroundImage = `url('/assets/units/${unitData['image']}.png')`
+    ele.id = unitData['id']
+    ele.href = `/units/?unit=${unitData['id']}`
+
+    var type = document.createElement('div')
+    type.classList.add('type')
+    type.classList.add(unitData['type'])
+    ele.append(type)
+
+    ele.setAttribute('name', unitData['name'])
+    ele.title = unitData['name']
+
+    return ele
 }
 
 function search(e) { // https://www.w3schools.com/howto/howto_js_filter_lists.asp
