@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: repeat(7, 72px);
     grid-gap: 10px;
+    float: left;
 }
 
 .unit {
@@ -201,4 +202,32 @@
     padding-top: 10px;
     padding-bottom: 10px;
     flex-wrap: wrap;
+}
+
+.options {
+    float: left;
+}
+
+.search {
+    float: right;
+    padding-top: 8px;
+}
+
+.search input {
+    background-color: var(--dark);
+    border: none;
+    border-bottom: 3px solid var(--light);
+    color: var(--light);
+    padding-bottom: 5px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 530px) {
+    .search {
+        float: left;
+        padding-top: 20px;
+    }
 }

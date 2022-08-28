@@ -16,15 +16,7 @@ if (userQuery !== 'human' &&
 
 if (sessionStorage['data'] && typeof sessionStorage['data'] !== 'undefined' && sessionStorage['data'] !== 'null') {
     datas = JSON.parse(sessionStorage.getItem('data'))
-    human = datas['units']['human']
-    elf = datas['units']['elf']
-    undead = datas['units']['undead']
-    orc = datas['units']['orc']
-    if (userQueryUnit !== null) { // prioritize unit
-        loadUnit(userQueryUnit)
-    } else {
-        loadTribe(userQuery)
-    }
+    init()
 } else {
     fetch('https://ef-utils.deta.dev')
         .then((response) => response.json())
@@ -35,15 +27,7 @@ if (sessionStorage['data'] && typeof sessionStorage['data'] !== 'undefined' && s
             } catch {
                 console.log(e)
             }
-            human = datas['units']['human']
-            elf = datas['units']['elf']
-            undead = datas['units']['undead']
-            orc = datas['units']['orc']
-            if (userQueryUnit !== null) { // prioritize unit
-                loadUnit(userQueryUnit)
-            } else {
-                loadTribe(userQuery)
-            }
+            init()
         })
 }
 
@@ -60,12 +44,21 @@ function gridColumns() {
 
 // check valid unit
 
-if (userQueryUnit !== null) { // prioritize unit
-    document.getElementById('tribe').style.display = 'none'
-} else {
-    document.getElementById('unit').style.display = 'none'
-    gridColumns()
-    window.onresize = gridColumns
+function init() {
+    human = datas['units']['human']
+    elf = datas['units']['elf']
+    undead = datas['units']['undead']
+    orc = datas['units']['orc']
+
+    if (userQueryUnit !== null) { // prioritize unit
+        document.getElementById('tribe').style.display = 'none'
+        loadUnit(userQueryUnit)
+    } else {
+        document.getElementById('unit').style.display = 'none'
+        gridColumns()
+        window.onresize = gridColumns
+        loadTribe(userQuery)
+    }
 }
 
 function getUnitById(id) {
@@ -253,6 +246,9 @@ function loadTribe(tribe) {
         type.classList.add(jsonData[i]['type'])
         ele.append(type)
 
+        ele.setAttribute('name', jsonData[i]['name'])
+        ele.title = jsonData[i]['name']
+
         grid = document.getElementById('grid')
         grid.append(ele)
     }
@@ -284,5 +280,26 @@ function unitMenu(n) {
         skills.style.display = 'none'
         material.style.display = 'none'
         equipment.style.display = ''
+    }
+}
+
+function search(e) { // https://www.w3schools.com/howto/howto_js_filter_lists.asp
+    var input = document.getElementById('search-input');
+    var filter = input.value.toUpperCase();
+    var grid = document.getElementById('grid').children;
+    var shown = [];
+
+    for (i = 0; i < grid.length; i++) {
+        txtValue = grid[i].getAttribute('name');
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            grid[i].style.display = '';
+            shown.push(grid[i])
+        } else {
+            grid[i].style.display = 'none';
+        }
+    }
+
+    if (event.key === 'Enter' && shown.length == 1) {
+        window.open(shown[0].href, '_self')
     }
 }
