@@ -158,6 +158,7 @@
     margin-left: calc((100% - 320px) / 2);
     margin-bottom: 50px;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
 }
 

@@ -1,3 +1,20 @@
+var datas;
+
+if (sessionStorage['data'] && typeof sessionStorage['data'] !== 'undefined' && sessionStorage['data'] !== 'null') {
+    datas = JSON.parse(sessionStorage.getItem('data'))
+} else {
+    fetch('https://ef-utils.deta.dev')
+        .then((response) => response.json())
+        .then((data) => {
+            datas = data
+            try {
+                sessionStorage.setItem('data', JSON.stringify(datas))
+            } catch {
+                console.log(e)
+            }
+        })
+}
+
 var sidebar = false
 
 function checkMobile() {
